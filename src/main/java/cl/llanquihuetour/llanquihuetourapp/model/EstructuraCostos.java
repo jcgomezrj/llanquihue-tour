@@ -1,5 +1,8 @@
 package cl.llanquihuetour.llanquihuetourapp.model;
 
+/**
+ * Representa la estructura de costos de un tour, incluyendo descuento por cantidad de personas.
+ */
 public class EstructuraCostos {
     private int costoPersona;
     private int precioPersona;
