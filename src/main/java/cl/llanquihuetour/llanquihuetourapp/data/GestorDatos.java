@@ -11,10 +11,18 @@ import java.nio.file.Path;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
-
+/**
+ * Gestiona la interacción del programa con datos externos.
+ */
 public class GestorDatos {
 
-    public ArrayList<Tour> cargarTours(Path rutaArchivo) {
+    /**
+     * Carga datos desde un archivo de texto separado por punto y coma.
+     * @param rutaArchivo Objeto Path con la ruta del archivo.
+     * @return Lista con los objetos Tour leídos.
+     * @throws IOException
+     */
+    public ArrayList<Tour> cargarTours(Path rutaArchivo) throws IOException {
         ArrayList<Tour> tours = new ArrayList<>();
         String linea = "";
         int numeroLinea = 0;
@@ -59,7 +67,7 @@ public class GestorDatos {
                     day = Integer.parseInt(campos[10]);
                 } catch (NumberFormatException e) {
                     System.err.println(
-                            "Uno de los campos numéricos de la línea " + numeroLinea + "no tiene un formato válido.");
+                            "Uno de los campos numéricos de la línea " + numeroLinea + " no tiene un formato válido.");
                     continue;
                 }
 
@@ -74,7 +82,7 @@ public class GestorDatos {
                     Tour tour = new Tour(
                             campos[0],
                             campos[1],
-                            campos[3],
+                            campos[2],
                             estructuraCostos,
                             campos[7],
                             fechaInicio);
@@ -83,8 +91,6 @@ public class GestorDatos {
                     System.err.println("Error al crear los objetos: " + e.getMessage());
                 }
             }
-        } catch (IOException e) {
-            System.err.println("Error al intentar abrir el archivo " + rutaArchivo.toAbsolutePath() + ".");
         }
         return tours;
     }

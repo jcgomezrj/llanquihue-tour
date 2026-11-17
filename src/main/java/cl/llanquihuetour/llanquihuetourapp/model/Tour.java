@@ -3,7 +3,7 @@ package cl.llanquihuetour.llanquihuetourapp.model;
 import java.time.LocalDate;
 
 /**
- * Esta clase representa un tour, incluye información identificatoria y también estructura de costos.
+ * Representa un tour, incluye información identificatoria y también estructura de costos.
  */
 public class Tour {
     private String nombreTour;
@@ -111,13 +111,12 @@ public class Tour {
 
     @Override
     public String toString() {
-        return "Tours{" +
-                "nombreTour='" + nombreTour + '\'' +
-                ", codigoIdentificador='" + codigoIdentificador + '\'' +
-                ", paisDestino='" + paisDestino + '\'' +
-                ", estructuraCostos=" + estructuraCostos +
-                ", medioTransporte='" + medioTransporte + '\'' +
-                ", fechaCreacion=" + fechaCreacion +
-                '}';
+        return "Nombre del tour: '" + nombreTour + '\'' +
+                "\nCódigo identificador: '" + codigoIdentificador + '\'' +
+                "\nPaís de destino: '" + paisDestino + '\'' +
+                "\n\nEstructura de costos:\n" + estructuraCostos +
+                "\nMedio de transporte: '" + medioTransporte + '\'' +
+                "\nFecha de creación: " + fechaCreacion +
+                "\n";
     }
 }

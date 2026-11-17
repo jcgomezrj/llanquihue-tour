@@ -1,5 +1,5 @@
 ![Duoc UC](https://www.duoc.cl/wp-content/uploads/2022/09/logo-0.png)
-# 🧠 Actividad Sumativa 1 – Desarrollo Orientado a Objetos I
+# 🧠 Actividad Formativa 3 – Desarrollo Orientado a Objetos I
 
 ## 👤 Autor del proyecto
 - **Nombre completo:** Juan Carlos Gómez Rojas
@@ -10,13 +10,11 @@
 ---
 
 ## 📘 Descripción general del sistema
-Este proyecto LlanquihueTour corresponde a la Actividad Sumativa 1 de la asignatura *Desarrollo Orientado a Objetos I*.
-Se trata de un sistema orientado a objetos desarrollado en Java, cuyo objetivo es crear distintas clases
-con relaciones de composición y herencia entre ellas, además de crear objetos demostrando su uso. Todo esto en el
-contexto de una empresa ficticia de turismo.
-
-De manera adicional, agregué diversos métodos validadores que arrojan excepciones y también javadoc
-en las clases.
+Este proyecto LlanquihueTourApp corresponde a la Actividad Formativa 3 de la asignatura 
+*Desarrollo Orientado a Objetos I*.
+Se trata de un sistema orientado a objetos desarrollado en Java, cuyo objetivo es obtener una lista de objetos
+a partir de un archivo de texto, incluyendo validaciones y excepciones para luego mostrarlos en pantalla.
+Todo esto en el contexto de una empresa ficticia de turismo.
 
 ---
 
@@ -24,9 +22,10 @@ en las clases.
 
 ```plaintext
 📁 src/
-├── app/         # Clase principal con el método main
-├── model/       # Clases de dominio (PersonaNatural, Direccion, Dte, FacturaVenta, Rut)
-├── util/        # Validaciones (Validador)
+├── ui/         # Clase principal con el método main
+├── model/      # Clases de dominio (Tour y EstructuraCostos)
+├── data/       # Gestión de datos (GestorDatos)
+├── resources/  # Archivo txt con datos (tours.txt)
 ````
 ---
 
@@ -35,24 +34,21 @@ en las clases.
 1. Clona el repositorio desde GitHub:
 
 ```bash
-git clone https://github.com/jcgomezrj/LlanquihueTour.git
+git clone https://github.com/jcgomezrj/LlanquihueTourApp.git
 ```
 
 2. Abre el proyecto en IntelliJ IDEA.
 
-3. Ejecuta el archivo `src/main/java/cl/llanquihuetour/erp/app/Main.java` desde el paquete `app`.
+3. Ejecuta el archivo `src/main/java/cl/llanquihuetour/llanquihuetourapp/ui/Main.java` desde el paquete `ui`.
 
 4. Sigue las instrucciones en consola o en la interfaz gráfica (si corresponde).
 
 ---
 
-**Repositorio GitHub:** <https://github.com/jcgomezrj/LlanquihueTour>
-**Fecha de entrega:** 09/11/2026
+**Repositorio GitHub:** <https://github.com/jcgomezrj/LlanquihueTourApp/>
+
+**Fecha de entrega:** 17/11/2026
 
 ---
 
-© Duoc UC | Escuela de Informática y Telecomunicaciones | Actividad Sumativa 1
-
-
-
-
+© Duoc UC | Escuela de Informática y Telecomunicaciones | Actividad Formativa 3
