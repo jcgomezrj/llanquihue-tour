@@ -12,8 +12,9 @@
 ## 📘 Descripción general del sistema
 Este proyecto LlanquihueTourApp corresponde a la Actividad Formativa 3 de la asignatura 
 *Desarrollo Orientado a Objetos I*.
-Se trata de un sistema orientado a objetos desarrollado en Java, cuyo objetivo es obtener una lista de objetos
-a partir de un archivo de texto, incluyendo validaciones y excepciones para luego mostrarlos en pantalla.
+Se trata de un sistema orientado a objetos desarrollado en Java, 
+cuyo objetivo es obtener una lista de objetos a partir de un archivo de texto, 
+incluyendo validaciones y excepciones para luego mostrarlos en pantalla.
 Todo esto en el contexto de una empresa ficticia de turismo.
 
 ---
