@@ -5,7 +5,7 @@ import java.time.LocalDate;
 /**
  * Esta clase representa un tour, incluye información identificatoria y también estructura de costos.
  */
-public class Tours {
+public class Tour {
     private String nombreTour;
     private String codigoIdentificador;
     private String paisDestino;
@@ -13,7 +13,7 @@ public class Tours {
     private String medioTransporte;
     private LocalDate fechaCreacion;
 
-    public Tours(
+    public Tour(
             String nombreTour,
             String codigoIdentificador,
             String paisDestino,
