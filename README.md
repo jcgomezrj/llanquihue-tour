@@ -34,7 +34,7 @@ Todo esto en el contexto de una empresa ficticia de turismo.
 1. Clona el repositorio desde GitHub:
 
 ```bash
-git clone https://github.com/jcgomezrj/LlanquihueTourApp.git
+git clone https://github.com/jcgomezrj/llanquihue-tour.git
 ```
 
 2. Abre el proyecto en IntelliJ IDEA.
@@ -45,7 +45,7 @@ git clone https://github.com/jcgomezrj/LlanquihueTourApp.git
 
 ---
 
-**Repositorio GitHub:** <https://github.com/jcgomezrj/LlanquihueTourApp/>
+**Repositorio GitHub:** <https://github.com/jcgomezrj/llanquihue-tour>
 
 **Fecha de entrega:** 17/11/2026
 
