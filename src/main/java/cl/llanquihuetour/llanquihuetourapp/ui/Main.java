@@ -44,7 +44,7 @@ public class Main {
                 System.out.println(
                         "Ingrese un término para buscar por ciudad o país de destino. Para terminar, escriba \"salir\".");
                 entrada = sc.nextLine();
-                if (entrada == null || entrada.isEmpty()) {
+                if (entrada == null || entrada.isBlank()) {
                     continue;
                 }
                 entrada = entrada.trim().toLowerCase();
