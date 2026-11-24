@@ -1,5 +1,5 @@
 ![Duoc UC](https://www.duoc.cl/wp-content/uploads/2022/09/logo-0.png)
-# 🧠 Actividad Formativa 3 – Desarrollo Orientado a Objetos I
+# 🧠 Actividad Sumativa 2 – Desarrollo Orientado a Objetos I
 
 ## 👤 Autor del proyecto
 - **Nombre completo:** Juan Carlos Gómez Rojas
@@ -10,11 +10,12 @@
 ---
 
 ## 📘 Descripción general del sistema
-Este proyecto LlanquihueTourApp corresponde a la Actividad Formativa 3 de la asignatura 
+Este proyecto LlanquihueTourApp corresponde a la Actividad Sumativa 2 de la asignatura 
 *Desarrollo Orientado a Objetos I*.
 Se trata de un sistema orientado a objetos desarrollado en Java, 
 cuyo objetivo es obtener una lista de objetos a partir de un archivo de texto, 
-incluyendo validaciones y excepciones para luego mostrarlos en pantalla.
+incluyendo validaciones y excepciones para luego mostrarlos en pantalla, además de
+tener un sistema de búsqueda de texto por terminal.
 Todo esto en el contexto de una empresa ficticia de turismo.
 
 ---
@@ -48,7 +49,7 @@ git clone https://github.com/jcgomezrj/llanquihue-tour.git
 
 **Repositorio GitHub:** <https://github.com/jcgomezrj/llanquihue-tour>
 
-**Fecha de entrega:** 17/11/2026
+**Fecha de entrega:** 23/11/2026
 
 ---
 
