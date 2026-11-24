@@ -6,12 +6,15 @@ import cl.llanquihuetour.llanquihuetourapp.model.Tour;
 import java.io.IOException;
 import java.nio.file.Path;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
 
         final Path rutaArchivo = Path.of("src/main/resources/tours.txt");
         GestorDatos gestor = new GestorDatos();
+        Scanner sc = new Scanner(System.in);
+        String entrada = "";
 
         try {
 
@@ -35,8 +38,36 @@ public class Main {
                     System.out.println(tour);
                 }
             }
+
+            // Preguntar por términos de búsqueda
+            while (!entrada.equals("q")) {
+                System.out.println(
+                        "Ingrese un término para buscar por ciudad o país de destino. Para terminar, escriba \"salir\".");
+                entrada = sc.nextLine();
+                if (entrada == null || entrada.isEmpty()) {
+                    continue;
+                }
+                entrada = entrada.trim().toLowerCase();
+                if (entrada.equals("salir")) {
+                    System.exit(0);
+                }
+                int encontrados = 0;
+                for (Tour tour : tours) {
+                    if (tour.getPaisDestino().toLowerCase().contains(entrada) || tour.getNombreTour().toLowerCase().contains(entrada)) {
+                        encontrados++;
+                        System.out.println("********** Tour encontrado número " + encontrados + " **********");
+                        System.out.println(tour);
+                    }
+                }
+                if (encontrados == 0) {
+                    System.out.println("No se encontró ningún tour con ese término de búsqueda.\n");
+                }
+            }
         } catch (IOException e) {
             System.err.println("Error al intentar abrir el archivo " + rutaArchivo.toAbsolutePath());
         }
+
+
+
     }
 }
