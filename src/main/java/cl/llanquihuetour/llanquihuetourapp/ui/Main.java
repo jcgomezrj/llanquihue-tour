@@ -1,9 +1,7 @@
 package cl.llanquihuetour.llanquihuetourapp.ui;
 
 import cl.llanquihuetour.llanquihuetourapp.data.GestorDatos;
-import cl.llanquihuetour.llanquihuetourapp.model.RutaGastronomica;
-import cl.llanquihuetour.llanquihuetourapp.model.ServicioTuristico;
-import cl.llanquihuetour.llanquihuetourapp.model.Tour;
+import cl.llanquihuetour.llanquihuetourapp.model.*;
 
 import java.io.IOException;
 import java.nio.file.Path;
@@ -17,6 +15,29 @@ public class Main {
         GestorDatos gestor = new GestorDatos();
         Scanner sc = new Scanner(System.in);
         String entrada = "";
+
+        // Pruebas de clases hijas, falta moverlo a otra clase y usar try catch.
+        ServicioTuristico servicioTuristico = new ServicioTuristico(
+                "Nombre de prueba",
+                7);
+        RutaGastronomica rutaGastronomica = new RutaGastronomica(
+                "Ruta de la Sopa",
+                4,
+                3);
+        PaseoLacustre paseoLacustre = new PaseoLacustre(
+                "Paseo por los Ríos",
+                8,
+                "catamarn");
+        ExcursionCultural excursionCultural = new ExcursionCultural(
+                "Centro de Santiago",
+                3,
+                "Ex Congreso de Santiago"
+        );
+
+        System.out.println(servicioTuristico);
+        System.out.println(rutaGastronomica);
+        System.out.println(paseoLacustre);
+        System.out.println(excursionCultural);
 
         try {
 
@@ -40,19 +61,6 @@ public class Main {
                     System.out.println(tour);
                 }
             }
-
-            // Pruebas de clases hijas.
-            ServicioTuristico servicioTuristico = new ServicioTuristico(
-                    "Nombre de prueba",
-                    7);
-            RutaGastronomica rutaGastronomica = new RutaGastronomica(
-                    "Ruta de la Sopa",
-                    4,
-                    3);
-
-            System.out.println(servicioTuristico);
-            System.out.println(rutaGastronomica);
-
 
             // Preguntar por términos de búsqueda
             while (true) {
