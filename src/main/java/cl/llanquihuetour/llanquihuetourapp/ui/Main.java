@@ -1,6 +1,8 @@
 package cl.llanquihuetour.llanquihuetourapp.ui;
 
 import cl.llanquihuetour.llanquihuetourapp.data.GestorDatos;
+import cl.llanquihuetour.llanquihuetourapp.model.RutaGastronomica;
+import cl.llanquihuetour.llanquihuetourapp.model.ServicioTuristico;
 import cl.llanquihuetour.llanquihuetourapp.model.Tour;
 
 import java.io.IOException;
@@ -39,18 +41,36 @@ public class Main {
                 }
             }
 
+            // Pruebas de clases hijas.
+            ServicioTuristico servicioTuristico = new ServicioTuristico(
+                    "Nombre de prueba",
+                    7);
+            RutaGastronomica rutaGastronomica = new RutaGastronomica(
+                    "Ruta de la Sopa",
+                    4,
+                    3);
+
+            System.out.println(servicioTuristico);
+            System.out.println(rutaGastronomica);
+
+
             // Preguntar por términos de búsqueda
-            while (!entrada.equals("q")) {
+            while (true) {
                 System.out.println(
                         "Ingrese un término para buscar por ciudad o país de destino. Para terminar, escriba \"salir\".");
                 entrada = sc.nextLine();
                 if (entrada == null || entrada.isBlank()) {
                     continue;
                 }
+
+                // Estandarizar la entrada para comparaciones.
                 entrada = entrada.trim().toLowerCase();
+
+                // Salir del while en caso de "salir".
                 if (entrada.equals("salir")) {
-                    System.exit(0);
+                    break;
                 }
+
                 int encontrados = 0;
                 for (Tour tour : tours) {
                     if (tour.getPaisDestino().toLowerCase().contains(entrada) || tour.getNombreTour().toLowerCase().contains(entrada)) {
@@ -67,7 +87,7 @@ public class Main {
             System.err.println("Error al intentar abrir el archivo " + rutaArchivo.toAbsolutePath());
         }
 
-
-
+        // Cerrar scanner
+        sc.close();
     }
 }
