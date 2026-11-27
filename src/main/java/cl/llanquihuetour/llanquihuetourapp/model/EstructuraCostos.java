@@ -79,9 +79,9 @@ public class EstructuraCostos {
     @Override
     public String toString() {
         return "Costo por persona: " + String.format("$%,d", costoPersona) +
-                "\nPrecio por persona: " + String.format("$%,d", precioPersona) +
-                "\nPersonas mínimas para descuento: " + personasDescuento +
-                "\nPorcentaje de descuento: " + porcentajeDescuento * 100 + "%" +
+                ". Precio por persona: " + String.format("$%,d", precioPersona) +
+                ". Personas mínimas para descuento: " + personasDescuento +
+                ". Porcentaje de descuento: " + porcentajeDescuento * 100 + "%" +
                 "\n";
     }
 }

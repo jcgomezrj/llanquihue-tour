@@ -131,5 +131,4 @@ public class GestorDatos {
         System.out.println(paseoLacustre1.toString());
         System.out.println(paseoLacustre2.toString());
     }
-
 }
