@@ -16,29 +16,6 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         String entrada = "";
 
-        // Pruebas de clases hijas, falta moverlo a otra clase y usar try catch.
-        ServicioTuristico servicioTuristico = new ServicioTuristico(
-                "Nombre de prueba",
-                7);
-        RutaGastronomica rutaGastronomica = new RutaGastronomica(
-                "Ruta de la Sopa",
-                4,
-                3);
-        PaseoLacustre paseoLacustre = new PaseoLacustre(
-                "Paseo por los Ríos",
-                8,
-                "catamarn");
-        ExcursionCultural excursionCultural = new ExcursionCultural(
-                "Centro de Santiago",
-                3,
-                "Ex Congreso de Santiago"
-        );
-
-        System.out.println(servicioTuristico);
-        System.out.println(rutaGastronomica);
-        System.out.println(paseoLacustre);
-        System.out.println(excursionCultural);
-
         try {
 
             // Cargar lista usando método.
@@ -94,6 +71,10 @@ public class Main {
         } catch (IOException e) {
             System.err.println("Error al intentar abrir el archivo " + rutaArchivo.toAbsolutePath());
         }
+
+        gestor.demostracionObjetos();
+
+        // todo falta ordenar y ver qué partes van y cuáles no.
 
         // Cerrar scanner
         sc.close();

@@ -1,7 +1,6 @@
 package cl.llanquihuetour.llanquihuetourapp.data;
 
-import cl.llanquihuetour.llanquihuetourapp.model.EstructuraCostos;
-import cl.llanquihuetour.llanquihuetourapp.model.Tour;
+import cl.llanquihuetour.llanquihuetourapp.model.*;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -12,7 +11,7 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 
 /**
- * Gestiona la interacción del programa con datos externos.
+ * Gestiona la interacción del programa con datos externos, además de crear objetos de muestra.
  */
 public class GestorDatos {
 
@@ -94,4 +93,42 @@ public class GestorDatos {
         }
         return tours;
     }
+
+    /**
+     * Crea objetos de prueba de subclases y los muestra por pantalla usando toString().
+     */
+    public void demostracionObjetos() throws IllegalArgumentException {
+
+        PaseoLacustre paseoLacustre1 = new PaseoLacustre(
+                "Lago Ranco",
+                5,
+                "velero");
+        PaseoLacustre paseoLacustre2 = new PaseoLacustre(
+                "Lago de Todos Los Santos",
+                4,
+                "catamarán");
+        ExcursionCultural excursionCultural1 = new ExcursionCultural(
+                "Centro Histórico de Santiago",
+                5,
+                "Palacio de La Moneda");
+        ExcursionCultural excursionCultural2 = new ExcursionCultural(
+                "Puerto de Valparaíso",
+                7,
+                "Batería Esmeralda");
+        RutaGastronomica rutaGastronomica1 = new RutaGastronomica(
+                "La Ruta del Sushi",
+                5,
+                3);
+        RutaGastronomica rutaGastronomica2 = new RutaGastronomica(
+                "La Ruta de la Hamburguesa",
+                4,
+                3);
+        System.out.println(paseoLacustre1.toString());
+        System.out.println(paseoLacustre2.toString());
+        System.out.println(rutaGastronomica1.toString());
+        System.out.println(rutaGastronomica2.toString());
+        System.out.println(paseoLacustre1.toString());
+        System.out.println(paseoLacustre2.toString());
+    }
+
 }
