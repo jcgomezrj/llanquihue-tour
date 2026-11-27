@@ -19,7 +19,7 @@ public class GestorDatos {
      * Carga datos desde un archivo de texto separado por punto y coma.
      * @param rutaArchivo Objeto Path con la ruta del archivo.
      * @return Lista con los objetos Tour leídos.
-     * @throws IOException
+     * @throws IOException Si falla la carga del archivo.
      */
     public ArrayList<Tour> cargarTours(Path rutaArchivo) throws IOException {
         ArrayList<Tour> tours = new ArrayList<>();
@@ -48,6 +48,7 @@ public class GestorDatos {
                 if (campos.length != 11) {
                     System.err.println(
                             "Línea número " + numeroLinea + " no contiene los campos esperados y fue omitida.");
+                    continue;
                 }
 
                 // Eliminar espacios de los campos.
